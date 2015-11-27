@@ -1,84 +1,62 @@
 {
-    "portfolio": [{
-        "path": "contents/single-portfolio.html",
-        "portfolioImg": "img/portfolio/1.jpg",
-        "categories": "3d",
-        "avatarImg": "img/me-1.jpg",
-        "avatarName": "Jane Smith",
-        "description": "Seed that <span class='accent'>dry grass</span>. Forth. Evening, you. Moveth, lights fish. "
-
-    }, {
-        "path": "contents/single-portfolio.html",
-        "portfolioImg": "img/portfolio/3.jpg",
-        "categories": "creative",
-        "avatarImg": "img/me-1.jpg",
-        "avatarName": "Jane Smith",
-        "description": "Seed that <span class='accent'>dry grass</span>. Forth. Evening, you. Moveth, lights fish. "
-
-    }, {
-        "path": "contents/single-portfolio.html",
-        "portfolioImg": "img/portfolio/4.jpg",
-        "categories": "3d",
-        "avatarImg": "img/me-1.jpg",
-        "avatarName": "Jane Smith",
-        "description": "Seed that <span class='accent'>dry grass</span>. Forth. Evening, you. Moveth, lights fish. "
-
-    }, {
-        "path": "contents/single-portfolio.html",
-        "portfolioImg": "img/portfolio/5.jpg",
-        "categories": "art",
-        "avatarImg": "img/me-1.jpg",
-        "avatarName": "Jane Smith",
-        "description": "Seed that <span class='accent'>dry grass</span>. Forth. Evening, you. Moveth, lights fish. "
-
-    }, {
-        "path": "contents/single-portfolio.html",
-        "portfolioImg": "img/portfolio/6.jpg",
-        "categories": "creative",
-        "avatarImg": "img/me-1.jpg",
-        "avatarName": "Jane Smith",
-        "description": "Seed that <span class='accent'>dry grass</span>. Forth. Evening, you. Moveth, lights fish. "
-
-    }, {
-        "path": "contents/single-portfolio.html",
-        "portfolioImg": "img/portfolio/7.jpg",
-        "categories": "anime",
-        "avatarImg": "img/me-1.jpg",
-        "avatarName": "Jane Smith",
-        "description": "Seed that <span class='accent'>dry grass</span>. Forth. Evening, you. Moveth, lights fish. "
-
-    }],
-    "blog": [{
-        "path": "contents/single-blog.html",
-        "blogImg": "img/blog/2.jpg",
-        "title": "Have subdue man deep moveth thing winged void hath sixth.",
-        "author": "Ralph Ferguson",
-        "date": "13/08/2015",
-        "commentsNumber": "+5 comments",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum repudiandae blanditiis, quia enim soluta, possimus voluptatibus ea nam natus vel sed aspernatur nihil voluptas fugiat pariatur nemo odio atque tempore."
-    }, {
-        "path": "contents/single-blog.html",
-        "blogIframe": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/65833474&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
-        "title": "Have subdue man deep moveth thing winged void hath sixth.",
-        "author": "Ralph Ferguson",
-        "date": "13/08/2015",
-        "commentsNumber": "+5 comments",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum repudiandae blanditiis, quia enim soluta, possimus voluptatibus ea nam natus vel sed aspernatur nihil voluptas fugiat pariatur nemo odio atque tempore."
-    }, {
-        "path": "contents/single-blog.html",
-        "blogIframe": "https://www.youtube.com/embed/ARM42-eorzE",
-        "title": "Have subdue man deep moveth thing winged void hath sixth.",
-        "author": "Ralph Ferguson",
-        "date": "13/08/2015",
-        "commentsNumber": "+5 comments",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum repudiandae blanditiis, quia enim soluta, possimus voluptatibus ea nam natus vel sed aspernatur nihil voluptas fugiat pariatur nemo odio atque tempore."
-    }, {
-        "path": "contents/single-blog.html",
-        "blogImg": "img/blog/3.jpg",
-        "title": "Have subdue man deep moveth thing winged void hath sixth.",
-        "author": "Ralph Ferguson",
-        "date": "13/08/2015",
-        "commentsNumber": "+5 comments",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum repudiandae blanditiis, quia enim soluta, possimus voluptatibus ea nam natus vel sed aspernatur nihil voluptas fugiat pariatur nemo odio atque tempore."
-    }]
+    "portfolio": [
+      {
+        "img": "img/portfolio/sa.png",
+        "title": "Study Agenda",
+        "description": "Time management tool to help students succeed. Currently in development. Beta version can be accessed at ",
+        "link": "//studyagenda.com",
+        "linkName": "StudyAgenda.com",
+        "tags": ["AngularJS", "NodeJS", "MongoDB"]
+    },
+    {
+        "img": "img/portfolio/aviation.jpg",
+        "title": "Adaptive Learning with Open edX",
+        "description": "Adaptive eLearning for Professional Pilots - Pilot Instrument Scaning Procedures on the Open edX platform. Progress can be viewed on ",
+        "link": "//github.com/CDOT-EDX/Project",
+        "linkName": "GitHub here",
+        "tags": ["JavaScript", "Python", "XBlock API", "Open edX"]
+    },
+    {
+        "img": "img/portfolio/webpal.png",
+        "title": "Palomino - WebPal",
+        "description": "A Cloud Content Management application desgined by Palomino. More information about the propriatary system can be found by visiting ",
+        "link": "//webpal.net",
+        "linkName": "WebPal.net",
+        "tags": ["JavaScript", "PHP", "XML"]
+    },
+    {
+        "img": "img/portfolio/georges.png",
+        "title": "Georges",
+        "description": "A unique solution for foodies to find new and exciting places for dining. More information on our lauch page - ",
+        "link": "//georgesapp.com",
+        "linkName": "GeorgesApp.com",
+        "tags": ["AngularJS", "NodeJS", "MongoDB"]
+    }
+  ],
+  "travel": [
+    {
+      "img": "img/travels/toronto.jpg",
+      "title": "Toronto, Canada"
+    },
+    {
+      "img": "img/travels/nyc.jpg",
+      "title": "New York City, USA"
+    },
+    {
+      "img": "img/travels/rome.jpg",
+      "title": "Rome, Italy"
+    },
+    {
+      "img": "img/travels/venice.jpg",
+      "title": "Venice, Italy"
+    },
+    {
+      "img": "img/travels/washington.jpg",
+      "title": "Washington, USA"
+    },
+    {
+      "img": "img/travels/quebec.jpg",
+      "title": "Quebec, Canada"
+    }
+  ]
 }

@@ -1,46 +1,36 @@
-<section class="left-side-container">
+<section class="full-width-container">
+  <!-- <div data-ng-include="loadViews" class="slide-top" data-ng-if="menu"></div> -->
     <div class="about-page">
         <h1 class="title primary-font">About me</h1>
-        <img class="carousel-image" src="img/me.jpg" alt="img/me.jpg">
+        <!-- <img class="carousel-image" src="img/me.jpg" alt="img/me.jpg"> -->
         <div class="info-content">
             <h3 class="title">
-                Said so god male saw. Above so after saying firmament evening a may good us.
+                Coding. Travel. Food. Photography.
             </h3>
-            <p>Elit vel risus mi nunc. Lacus. Mollis duis. Viverra tortor conubia viverra ullamcorper. Semper ornare mi id mattis condimentum cubilia nisi. Mi pharetra orci platea, ad cras ultrices. Posuere facilisi tellus euismod aptent ultrices ullamcorper justo. Tristique lobortis duis fames mus ligula inceptos. Integer. Habitant duis magnis lacinia. Eros pellentesque vestibulum.</p>
-            <p>At bibendum magnis dolor tortor pede dapibus gravida montes magna. Quam justo volutpat montes mauris nullam aliquet quam nostra Ante Justo euismod sagittis suspendisse blandit convallis eros dignissim nonummy ridiculus lobortis rhoncus Molestie. Faucibus class ac ante facilisis nec mi sociis.</p>
+            <p>
+              Those are the four words that sum it all up. I enjoy problem-solving and coding. The harder the problem, the more fun.
+            </p>
+            <p>
+              During my free time, I love to explore new destinations and food. As I travel, I like to photograph everything around me.
+            </p>
+            <p>
+              Here are some examples of what I mean:
+            </p>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="row">
+                  <div class="col-sm-6" ng-repeat="elm in mainpTravel">
+                    <div class="thumbnail">
+                      <img src="{{elm.img}}"/>
+                      <div class="caption">
+                        <h5>{{elm.title}}</h5>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+
         </div>
     </div>
 </section>
-<aside class="right-side-container">
-    <div class="about-page">
-        <table class="table table-hover">
-            <tbody>
-                <tr>
-                    <td class="td-main">Name</td>
-                    <td class="td-second">Jane Smith</td>
-                </tr>
-                <tr>
-                    <td class="td-main">Born</td>
-                    <td class="td-second">June 11, 1988</td>
-                </tr>
-                <tr>
-                    <td class="td-main">E-mail</td>
-                    <td class="td-second"><a href="mailto:mail@example.com">email@example.com</a></td>
-                </tr>
-                <tr>
-                    <td class="td-main">Address</td>
-                    <td class="td-second">141 Mirzo, Tashkent</td>
-                </tr>
-                <tr>
-                    <td class="td-main">Phone</td>
-                    <td class="td-second"><a href="tel:01234567890">123-4567-8910</a></td>
-                </tr>
-                <tr>
-                    <td class="td-main">Website</td>
-                    <td class="td-second"><a href="www.example.net">www.example.net</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <button class="primary">Download resume</button>
-    </div>
-</aside>

@@ -180,21 +180,21 @@ Description:    All the codes written with seperated directives and modules. You
     /*********
      *** blog-items directive ***
      *********/
-    app.directive('loadingItems', ['$rootScope', '$location', '$anchorScroll', function($rootScope, $location, $anchorScroll) {
-        return {
-            restrict: 'C',
-            transclude: true,
-            template: '<div ng-click="dataLoad()" ng-transclude></div>',
-            link: function(scope, element, attribute) {
-                element.on('click', function() {
-                    $rootScope.menu = true;
-                    $rootScope.loadViews = attribute['path'];
-                    $location.hash('theMain')
-                    $anchorScroll()
-                })
-            }
-        }
-    }]);
+    // app.directive('loadingItems', ['$rootScope', '$location', '$anchorScroll', function($rootScope, $location, $anchorScroll) {
+    //     return {
+    //         restrict: 'C',
+    //         transclude: true,
+    //         template: '<div ng-click="dataLoad()" ng-transclude></div>',
+    //         link: function(scope, element, attribute) {
+    //             element.on('click', function() {
+    //                 $rootScope.menu = true;
+    //                 $rootScope.loadViews = attribute['path'];
+    //                 $location.hash('theMain')
+    //                 $anchorScroll()
+    //             })
+    //         }
+    //     }
+    // }]);
 
     /*********
      *** personalWebsiteAppController controller ***
@@ -242,7 +242,7 @@ Description:    All the codes written with seperated directives and modules. You
             $rootScope.menu = false;
             $location.path('/').hash('')
         }
-        $rootScope.blog = true;
+        $rootScope.blog = false;
         $scope.itemone = false;
         $timeout(function() {
             $scope.itemone = true;
@@ -276,7 +276,11 @@ Description:    All the codes written with seperated directives and modules. You
         // Portfolio get json files
         $http.get('json/portfolio.json')
             .then(function(res) {
+              console.log("arrays?");
+              console.log(res.data);
                 $scope.mainpPortfolio = res.data.portfolio;
+                $scope.mainpTravel = res.data.travel;
+
                 $scope.mainBlog = res.data.blog;
             });
     }]);

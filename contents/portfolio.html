@@ -1,25 +1,47 @@
 <section class="full-width-container">
     <div data-ng-include="loadViews" class="slide-top" data-ng-if="menu">
     </div>
-    <div class="portfolio-page" data-ng-if="!menu">
+    <div class="portfolio-page col-xs-12" data-ng-if="!menu">
         <h1 class="title primary-font">Portfolio</h1>
-        <div ng-repeat="elm in mainpPortfolio " class="info-content loading-items primary slide-top" path="{{elm.path}}">
-            <img ng-src="{{elm.portfolioImg}}" alt="">
+        <!-- <div class="info-content loading-items primary slide-top" path="{{elm.path}}"> -->
+            <!-- <img ng-src="{{elm.portfolioImg}}" alt="">
             <div class="cover primary">
                 <img ng-src="{{elm.avatarImg}}" alt="" class="portfolio-avatar">
                 <span class="icon">
                     <i class="user"></i> by {{elm.avatarName}}
                 </span>
                 <h2 class="info-title loading-items" path="contents/single-portfolio.html" ng-bind-html="elm.description"></h2>
+            </div> -->
+            <div class="row">
+              <div class="col-xs-6" ng-repeat="elm in mainpPortfolio">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">{{elm.title}}</h3>
+                  </div>
+                  <div class="panel-body" style="min-height: 200px">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <span class="label label-success" ng-repeat="tag in elm.tags" style="margin: 1px">{{tag}}</span>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <br/>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-8">
+                        {{elm.description}}
+                        <a ng-href="{{elm.link}}">{{elm.linkName}}</a>
+                      </div>
+                      <div class="col-xs-4">
+                        <img src="{{elm.img}}"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-        <div class="pagination">
-            <a href="" class="page-num current">1</a>
-            <a href="" class="page-num">2</a>
-            <a href="" class="page-num">3</a>
-            <a href="" class="page-num dots">...</a>
-            <a href="" class="page-num">6</a>
-            <a href="" class="page-num next">next</a>
+
+          </div>
         </div>
     </div>
 </section>

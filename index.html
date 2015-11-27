@@ -3,15 +3,15 @@
 
 <head>
     <!-- if your hosting hosted directly you can leave the base href as is if you upload with some roots then you can specify the root otherwise it will make erorrs -->
-    <base href="/">
+    <base href="/~pavlick/">
     <meta charset="UTF-8">
-    <title>Shoxi - Personal Vcard & Resume Angular Template</title>
+    <title>pkuzhel's portfolio</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!-- this ng-href for color picking demo purposes only anytime you can delete and you can choose certain color -->
-    <link rel="stylesheet" data-ng-href="{{colors}}" href="/">
+    <!-- <link rel="stylesheet" data-ng-href="{{colors}}" href="/"> -->
     <!-- uncomment stylesheet if you want to remove ng-href color picker demo -->
-    <!-- <link rel="stylesheet" href="css/blue.css"> -->
+    <link rel="stylesheet" href="css/blue.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
@@ -23,7 +23,7 @@
 
 <body data-ng-controller="personalWebsiteAppController">
     <!-- this color changer for demo purposes only you can completely get rid of it -->
-    <div class="color-changer" data-ng-class="{'color-changer-hiden':!colorContainer}">
+    <!-- <div class="color-changer" data-ng-class="{'color-changer-hiden':!colorContainer}">
         <div class="color-changer-icon" data-ng-click="openColorChanger()"></div>
         <h3>Choose the color</h3>
         <div class="blue" data-ng-click="openColorChanger();changeColor('css/blue.css')"></div>
@@ -31,13 +31,13 @@
         <div class="red" data-ng-click="openColorChanger();changeColor('css/red.css')"></div>
         <div class="brown" data-ng-click="openColorChanger();changeColor('css/brown.css')"></div>
         <div class="yellow" data-ng-click="openColorChanger();changeColor('css/yellow.css')"></div>
-    </div>
+    </div> -->
     <!-- LOADERS -->
     <div class="loads">
         <div class="pre-loader" data-ng-if="loader">
             <img src="img/icons/load.svg" alt="img/icons/load.svg">
         </div>
-        <h1 data-ng-if="loader">Shoxi - Personal Vcard & Resume Angular Template</h1>
+        <h1 data-ng-if="loader">pkuzhel's portfolio</h1>
     </div>
     <div class="pre-loader" data-ng-if="loader">
         <img src="img/icons/load.svg" alt="img/icons/load.svg">
@@ -47,23 +47,21 @@
         <div class="top-nav primary" id="theMain">
             <ul class="top-nav-socials">
                 <li>
-                    <a href="" class="social-icons fa fa-facebook"></a>
+                    <a href="//twitter.com/pkuzhel" class="social-icons fa fa-twitter"></a>
                 </li>
                 <li>
-                    <a href="" class="social-icons fa fa-twitter"></a>
+                    <a href="//ca.linkedin.com/in/pkuzhel" class="social-icons fa fa-linkedin"></a>
                 </li>
                 <li>
-                    <a href="" class="social-icons fa fa-linkedin"></a>
+                    <a href="//github.com/pkuzhel" class="social-icons fa fa-github"></a>
                 </li>
             </ul>
             <div class="top-nav-avatar">
                 <div class="load-data" data-path="contents/about.html">
                     <img src="img/me-1.jpg" alt="" class="top-avatar">
                 </div>
-                <h2>Jane Smith </h2>
-                <p>
-                    web designer
-                    <br> / developer
+                <h2>Pavlo Kuzhel </h2>
+                <p>DEVELOPER
                 </p>
             </div>
         </div>
@@ -72,27 +70,10 @@
         <div class="left-side" data-ng-click="closeMenu()">
             <nav>
                 <ul class="menu-list">
-                    <li class="load-data" data-path="contents/about.html"><i class="fa fa-user"></i>About</li>
-                    <li data-ng-click="resume = !resume">
-                        <i class="fa fa-plus open-button toggle" data-ng-show="!resume"></i>
-                        <i class="fa fa-minus open-button toggle" data-ng-show="resume"></i>
-                        <i class="fa fa-briefcase"></i>
-                        <span>Resume</span>
-                    </li>
-                    <li data-ng-show="resume" class="slide-top">
-                        <ul class="child-data primary">
-                            <li class="load-data" data-path="contents/resume.html">
-                                Experience
-                            </li>
-                            <li class="load-data" data-path="contents/services.html">
-                                Services
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="load-data nav-home" data-path="contents/blog.html"><i class="fa fa-comments"></i>Blog</li>
+                    <li class="load-data nav-home" data-path="contents/about.html"><i class="fa fa-user"></i>About</li>
+                    <li class="load-data" data-path="contents/resume.html"><i class="fa fa-user"></i>Resume</li>
                     <li class="load-data" data-path="contents/portfolio.html"><i class="fa fa-image"></i>Portfolio</li>
                     <li class="load-data" data-path="contents/contact.html"><i class="fa fa-envelope-o"></i>Contact</li>
-                    <li class="load-data" data-path="contents/instructions.html"><i class="fa fa-wrench"></i>Instructions</li>
                 </ul>
             </nav>
         </div>
