@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<head lang="en">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Template Documentation Template</title>
+    <!-- Framework CSS -->
+    <link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+    <!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+    <style type="text/css" media="screen">
+    p,
+    table,
+    hr,
+    .box {
+        margin-bottom: 25px;
+    }
+    
+    .box p {
+        margin-bottom: 10px;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    code {
+        background-color: #000;
+        padding: 2px 6px;
+        color: #fff;
+    }
+    
+    pre {
+        background-color: #eee;
+        padding: 0 12px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="center alt">&ldquo;Shoxi - Personal Vcard & Resume Angular Template&rdquo; Documentation by &ldquo;Tuxsanov&rdquo; v1.0</h3>
+        <hr>
+        <h1 class="center">&ldquo;Shoxi - Personal Vcard & Resume Angular Template&rdquo;</h1>
+        <div class="borderTop">
+            <div class="span-6 colborder info prepend-1">
+                <p class="prepend-top">
+                    <strong>
+					Created: 09/2015<br>
+					By: Tuxsanov<br>
+					Email: <a href="mailto:imaterial.co@gmail.com">imaterial.co@gmail.com</a>
+					</strong>
+                </p>
+            </div>
+            <!-- end div .span-6 -->
+            <div class="span-12 last">
+                <p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/imaterial">here</a>. Thanks so much!</p>
+            </div>
+        </div>
+        <!-- end div .borderTop -->
+        <hr>
+        <h2 id="toc" class="alt">Table of Contents</h2>
+        <ol class="alpha">
+            <li><a href="#installations">Installations </a></li>
+            <li><a href="#positioning">Positioning</a></li>
+            <li><a href="#navElm">Nav elements and loading files</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#maps">Map</a></li>
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#fonts">Fonts</a></li>
+            <li><a href="#credits">Sources and Credits</a></li>
+        </ol>
+        <hr>
+        <h3 id="installations"><strong>A) Installations</strong> - <a href="#toc">top</a></h3>
+        <ul>
+            <li>
+                <p>
+                    <span class="primary-font">With hosting</span> - You upload all the files to your hosting if you upload under the some path such as <code>example.com/path</code> you have to declare it inside of <code>&lt;base href="/path/"&gt;</code> in <code>index.html</code> or you can leave it as is if there not any path.
+                </p>
+                <img src="assets/img/2.png" alt="base href" />
+            </li>
+            <li>
+                <p>
+                    <span class="primary-font">With local hosting</span> - If you want to install locally you have number of options. Such as <a href="http://gulpjs.com/">Gulpjs</a>, <a href="https://nodejs.org/en/">Nodejs</a>, <a href="http://yeoman.io/">Yeoman</a> and others. I would recomended Yeoman scaffolding tool because I found it easy to use and undertsand even if you beginer or intermediate level. Here is the tutorial how to install angular app <a href="https://github.com/yeoman/generator-angular">Tutorial</a>
+                </p>
+                <p>
+                    After you installed the angular app with <a href="https://github.com/yeoman/generator-angular">Yeoman</a>. You have something similar folder and files will be installed
+                </p>
+                <img src="assets/img/3.png" alt="" />
+                <p>
+                    Delete all the files inside of app folder and paste all the files inside of <i>shoxi</i> zip folder.
+                </p>
+                <p>
+                    Then open your command line and type <code>grunt serve</code> and enter. It will automatically run in the local server.
+                </p>
+            </li>
+        </ul>
+        <hr>
+        <h3 id="positioning"><strong>B) Positioning</strong> - <a href="#toc">top</a></h3>
+        <p>Template divided into two separated collumns (rightside, leftside) and one header.</p>
+        <p>Leftside and header will always stays fixed positions. All the content dynamically renders inside of right side.</p>
+        <p>Inside of right side sections also contains one and two collumns. This sections will follows like this</p>
+        <ol ng-if="positioning" class="ng-scope">
+            <li>
+                <code>&lt;section class="full-width-container"&gt;...&lt;/section&gt;</code>
+                <p>Displaying full width container elements</p>
+            </li>
+            <li>
+                <code>&lt;aside class="right-side-container"&gt;...&lt;/aside&gt;</code>
+                <p>Displaying right side container elements</p>
+            </li>
+            <li>
+                <code>&lt;section class="left-side-container"&gt;...&lt;/section&gt;</code>
+                <p>Displaying left side container elements</p>
+            </li>
+            <img src="assets/img/4.jpg" alt="" />
+        </ol>
+        <p>
+            Theme starts from Home page top nav bar. You can add the social icons inside <i>top-nav-socials</i> div element. Social icons can be found from <a href="https://fortawesome.github.io/Font-Awesome/">here</a>
+        </p>
+        <hr>
+        <h3 id="navElm"><strong>C) Nav elements and loading files</strong> - <a href="#toc">top</a></h3>
+        <p>
+            Nav elements sections located in left side container
+        </p>
+        <img src="assets/img/4.png" alt="">
+        <p>
+            In order to loading datas you need to specify nav menu name and the path for the html file
+        </p>
+        <pre>&lt;nav&gt; <br>   &lt;ul class="<span class="primary-font">menu-list</span>"&gt;<br>       &lt;li class="<span class="primary-font">load-data</span>" <span class="primary-font">path</span>="views/example.html"&gt;nav menu name&lt;/li&gt; <br>   &lt;/ul&gt;<br>&lt;/nav&gt;</pre>
+        <p><small>you can create or load completely seperated html files</small></p>
+        <p>
+            By setting <code>nav-home</code> class you can declare the which file should be loaded first
+        </p>
+        <pre><br>&lt;li class="load-data <span class="primary-font">nav-home</span>" path="views/example.html"&gt;nav menu name&lt;/li&gt;
+            </pre>
+        <p>To achieve dropdown menu is very easy you should simply declare a few angularjs elements to achieve similar effects</p>
+        <ul>
+            <li>
+                First declaring li elemen as usual without any classes
+                <pre>&lt;li&gt;drop down&lt;/li&gt;</pre>
+            </li>
+            <li>
+                <p>Then adding some angularjs click elements</p>
+                <pre><br>&lt;li ng-click="dropDown = !dropDown"&gt;drop down&lt;/li&gt;
+                    </pre>
+                <p>meaning of this when dropDown is true set it false if false set it true</p>
+            </li>
+            <li>
+                <p>Then add which element should be shown</p>
+                <p>Below the &lt;li&gt; element add another &lt;li&gt; element</p>
+                <pre><br>&lt;li ng-show="dropDown"&gt; <br> &lt;ul&gt; <br>    &lt;li&gt;...&lt;/li&gt;  <br> &lt;/ul&gt; <br>&lt;/li&gt;
+                    </pre>
+            </li>
+        </ul>
+        <hr>
+        <h3 id="javascript"><strong>D) JavaScript</strong> - <a href="#toc">top</a></h3>
+        <p>This theme imports three Javascript files.</p>
+        <ol>
+            <li>jQuery</li>
+            <li>Bootstrap</li>
+            <li>My custom script</li>
+            <li>Angular modules</li>
+        </ol>
+        <ol>
+            <li>
+                <p>
+                    Overall app is not depended on jQuery at all. But jQuery added for bootstrap functionalities only</li>
+            </p>
+            <li>
+                <p>
+                    inside of app.js modules seperated and you can add your own module inside of app module if you want to.
+                </p>
+                <img src="assets/img/5.png" alt="">
+            </li>
+        </ol>
+        <hr>
+        <h3 id="portfolio"><strong>E) Portfolio & Blog loading files</strong> - <a href="#toc">top</a></h3>
+        <p>In both pages there have some hard coded angular codes directly inside of html codes overall structure is identical for this I will explain one of them.</p>
+        <p>There have many choices to hide the angular codes through directives and I think it will be much better if I explain a little bit rather than hiding it</p>
+        <code>
+                &lt;div data-ng-include="loadViews" class="slide-top" data-ng-if="menu"&gt;...&lt;/div&gt;
+            </code>
+        <p>
+            All the datas load inside of <code>loadViews</code> as rendered HTML file
+        </p>
+        <img src="assets/img/6.png" alt="">
+        <p>All you nedd you set the loading files properly inside of path <code>&lt;h2 class="info-title loading-items" path="contents/single-portfolio.html"&gt;</code></p>
+        <p>After loading completed <code>data-ng-if or ng-if</code> hides other part of the page</p>
+        <code>
+                &lt;div class="portfolio-page" data-ng-if="!menu"&gt;... &lt;/div&gt;
+            </code>
+        <br>
+        <br>
+        <hr>
+        <h3 id="forms"><strong>F) Forms</strong> - <a href="#toc">top</a></h3>
+        <p>There number of options which you can make some interactivity with forms. </p>
+        <p>By giving ng-module to the input you can make some interactions.</p>
+        <pre class="ng-binding">&lt;h5&gt;Your name is &lt;span ng-bind="user.name"&gt;&lt;/span&gt;&lt;/h5&gt;</pre>
+        <pre>&lt;div class="contents"&gt;
+      &lt;input type="text" name="name" ng-model="user.name"&gt;
+      &lt;span class="filling"&gt;&lt;/span&gt;
+      &lt;label&gt;Name&lt;/label&gt;
+ &lt;/div&gt;</pre>
+        <hr>
+        <h3 id="maps"><strong>G) Map</strong> - <a href="#toc">top</a></h3>
+        <p>In order to setting map you need your API and the coordinates of your positioning</p>
+        <code>
+                &lt;div class="personal-map" latitude="..." longitude="..." zoom="..." api="..."&gt;&lt;/div&gt;
+            </code>
+        <p>Zoom value from 1 - 15</p>
+        <p>For mor info <a target="_blank" href="https://developers.google.com/maps/documentation/javascript/tutorial#api_key">how to get your API</a></p>
+        <hr>
+        <h3 id="colors"><strong>H) Colors</strong> - <a href="#toc">top</a></h3>
+        <p>
+            By changing the
+            <code> .primary</code>
+            <code> .accent</code>
+            <code> .warn</code> stylesheets colors you can change the whole site background colors.
+        </p>
+        <p>
+            You can change the fonts color by <code> .primary-font</code>
+            <code> .accent-font</code>
+            <code> .warn-font</code> adding this colors to specific font element.
+        </p>
+        <h5>Example</h5>
+        <code>
+        	&lt;h1 class="warn-font">Warn font&lt;/h1>
+        </code>
+        <p>
+            All the colors seperated stylesheets by adding your own styles
+        </p>
+        <h5>Example</h5>
+        <code>
+        	.primary{
+				background-color: red;
+        	}
+        </code>
+        <br>
+        <br>
+        <hr>
+        <h3 id="fonts"><strong>I) Fonts</strong> - <a href="#toc">top</a></h3>
+        <p>
+            If you want to add fonts to specific part of the site you can achieve it by adding name of the icon which is provided in <a href="https://fortawesome.github.io/Font-Awesome/">Font-Awesome</a></p>
+        </p>
+        <code>
+        	&lt;i class="fa fa-iconname">icon name&lt;/i>
+        </code>
+        <br>
+        <br>
+        <hr>
+        <h3 id="credits"><strong>J) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+        <p>I've used the following images, icons or other files as listed.
+            <p>Images - <a tartget="_blank" href="http://unsplash.com">Unsplash</a></p>
+            <p>Icons - <a href="https://fortawesome.github.io/Font-Awesome/">Font-Awesome</a></p>
+            <p>Normalize - <a tartget="_blank" href="http://git.io/normalize">Normalize</a></p>
+            <p>Angularjs - <a tartget="_blank" href="http://angularjs.org">Angularjs</a></p>
+            <p>Bootstrap - <a tartget="_blank" href="http://getbootstrap.com">Bootstrap</a></p>
+            <p>Pexels - <a target="_blank" href="http://www.pexels.com">Pexels</a></p>
+            <hr>
+            <p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+            <p class="append-bottom alt large"><strong>Tuxsanov</strong></p>
+            <p><a href="#toc">Go To Table of Contents</a></p>
+            <hr class="space">
+    </div>
+    <!-- end div .container -->
+</body>
+
+</html>

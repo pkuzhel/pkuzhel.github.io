@@ -1,70 +1,121 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>pkuzhel.com by pkuzhel</title>
+<!DOCTYPE html>
+<html lang="en" data-ng-app="personalWebsiteApp">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<head>
+    <!-- if your hosting hosted directly you can leave the base href as is if you upload with some roots then you can specify the root otherwise it will make erorrs -->
+    <base href="/">
+    <meta charset="UTF-8">
+    <title>Shoxi - Personal Vcard & Resume Angular Template</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- this ng-href for color picking demo purposes only anytime you can delete and you can choose certain color -->
+    <link rel="stylesheet" data-ng-href="{{colors}}" href="/">
+    <!-- uncomment stylesheet if you want to remove ng-href color picker demo -->
+    <!-- <link rel="stylesheet" href="css/blue.css"> -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css">
+    <link rel="stylesheet" href="css/all.css">
+    <!-- <link rel="stylesheet" href="css/third.css"> -->
+</head>
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="without-description">
-        <h1>pkuzhel.com</h1>
-        <p></p>
-        <p class="view"><a href="https://github.com/pkuzhel/mygithubpage">View the Project on GitHub <small>pkuzhel/mygithubpage</small></a></p>
-        <ul>
-          <li><a href="https://github.com/pkuzhel/mygithubpage/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/pkuzhel/mygithubpage/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/pkuzhel/mygithubpage">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
+<body data-ng-controller="personalWebsiteAppController">
+    <!-- this color changer for demo purposes only you can completely get rid of it -->
+    <div class="color-changer" data-ng-class="{'color-changer-hiden':!colorContainer}">
+        <div class="color-changer-icon" data-ng-click="openColorChanger()"></div>
+        <h3>Choose the color</h3>
+        <div class="blue" data-ng-click="openColorChanger();changeColor('css/blue.css')"></div>
+        <div class="green" data-ng-click="openColorChanger();changeColor('css/green.css')"></div>
+        <div class="red" data-ng-click="openColorChanger();changeColor('css/red.css')"></div>
+        <div class="brown" data-ng-click="openColorChanger();changeColor('css/brown.css')"></div>
+        <div class="yellow" data-ng-click="openColorChanger();changeColor('css/yellow.css')"></div>
     </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/pkuzhel">pkuzhel</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+    <!-- LOADERS -->
+    <div class="loads">
+        <div class="pre-loader" data-ng-if="loader">
+            <img src="img/icons/load.svg" alt="img/icons/load.svg">
+        </div>
+        <h1 data-ng-if="loader">Shoxi - Personal Vcard & Resume Angular Template</h1>
+    </div>
+    <div class="pre-loader" data-ng-if="loader">
+        <img src="img/icons/load.svg" alt="img/icons/load.svg">
+    </div>
+    <!-- Home page starts -->
+    <div class="homePage">
+        <div class="top-nav primary" id="theMain">
+            <ul class="top-nav-socials">
+                <li>
+                    <a href="" class="social-icons fa fa-facebook"></a>
+                </li>
+                <li>
+                    <a href="" class="social-icons fa fa-twitter"></a>
+                </li>
+                <li>
+                    <a href="" class="social-icons fa fa-linkedin"></a>
+                </li>
+            </ul>
+            <div class="top-nav-avatar">
+                <div class="load-data" data-path="contents/about.html">
+                    <img src="img/me-1.jpg" alt="" class="top-avatar">
+                </div>
+                <h2>Jane Smith </h2>
+                <p>
+                    web designer
+                    <br> / developer
+                </p>
+            </div>
+        </div>
+        <span class="mobile-menu" data-ng-click="openMenu()">
+        </span>
+        <div class="left-side" data-ng-click="closeMenu()">
+            <nav>
+                <ul class="menu-list">
+                    <li class="load-data" data-path="contents/about.html"><i class="fa fa-user"></i>About</li>
+                    <li data-ng-click="resume = !resume">
+                        <i class="fa fa-plus open-button toggle" data-ng-show="!resume"></i>
+                        <i class="fa fa-minus open-button toggle" data-ng-show="resume"></i>
+                        <i class="fa fa-briefcase"></i>
+                        <span>Resume</span>
+                    </li>
+                    <li data-ng-show="resume" class="slide-top">
+                        <ul class="child-data primary">
+                            <li class="load-data" data-path="contents/resume.html">
+                                Experience
+                            </li>
+                            <li class="load-data" data-path="contents/services.html">
+                                Services
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="load-data nav-home" data-path="contents/blog.html"><i class="fa fa-comments"></i>Blog</li>
+                    <li class="load-data" data-path="contents/portfolio.html"><i class="fa fa-image"></i>Portfolio</li>
+                    <li class="load-data" data-path="contents/contact.html"><i class="fa fa-envelope-o"></i>Contact</li>
+                    <li class="load-data" data-path="contents/instructions.html"><i class="fa fa-wrench"></i>Instructions</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="right-side">
+                    <div class="main-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Home page ends -->
+    <!-- Angular libraries & Modules-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <!-- Custom Scripts -->
+    <!-- ... -->
+    <script src="js/main.js"></script>
+</body>
+
 </html>

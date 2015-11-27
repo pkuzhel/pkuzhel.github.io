@@ -1,0 +1,178 @@
+<section class="full-width-container">
+    <div class="instructions">
+        <h1 class="primary-font">Instructions</h1>
+        <h3>General information</h3>
+        <p>All the content divided in seperated html files you can simply add any second party html codes without any problem</p>
+        <p>
+            Right now sections divided into 3 different categories you can also use bootstrap grid styles
+        </p>
+        <hr>
+        <h4 ng-click="installation = !installation">Installation</h4>
+        <ul ng-if="installation">
+            <li>
+                <p>
+                    <span class="primary-font">With hosting</span> - You upload all the files to your hosting if you upload under the some path such as <code>example.com/path</code> you have to declare it inside of <code>&lt;base href="/path/"></code> in <code>index.html</code> or you can leave it as is if there not any path.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <span class="primary-font">With local hosting</span> - If you want to install locally you have number of options. Such as <a href="http://gulpjs.com/">Gulpjs</a>, <a href="https://nodejs.org/en/">Nodejs</a>, <a href="http://yeoman.io/">Yeoman</a> and others. I would recomended Yeoman scaffolding tool because I found it easy to use and undertsand even if you beginer or intermediate level. Here is the tutorial how to install angular app <a href="https://github.com/yeoman/generator-angular">Tutorial</a>
+                </p>
+            </li>
+        </ul>
+        <hr>
+        <h4 ng-click="positioning = !positioning">Positioning</h4>
+        <ol ng-if="positioning">
+            <li>
+                <code>&lt;section class="full-width-container">...&lt;/section></code>
+                <p>Displaying full width container elements</p>
+            </li>
+            <li>
+                <code>&lt;aside class="right-side-container">...&lt;/aside></code>
+                <p>Displaying right side container elements</p>
+            </li>
+            <li>
+                <code>&lt;section class="left-side-container">...&lt;/section></code>
+                <p>Displaying left side container elements</p>
+            </li>
+            <img src="img/instructions/position.jpg" alt="">
+        </ol>
+        <hr>
+        <h4 ng-click="navElements = !navElements">Nav elements and loading files</h4>
+        <div ng-if="navElements">
+            <p>
+                In order to loading datas you need to specify nav menu name and the path for the html file
+            </p>
+            <pre>&lt;nav> <br>   &lt;ul class="<span class="primary-font">menu-list</span>"><br>       &lt;li class="<span class="primary-font">load-data</span>" <span class="primary-font">path</span>="views/example.html">nav menu name&lt;/li> <br>   &lt;/ul><br>&lt;/nav></pre>
+            <p><small>you can create or load completely seperated html files</small></p>
+            <p>
+                By setting <code>nav-home</code> class you can declare the which file should be loaded first
+            </p>
+            <pre><br>&lt;li class="load-data <span class="primary-font">nav-home</span>" path="views/example.html">nav menu name&lt;/li>
+            </pre>
+            <p>To achieve dropdown menu is very easy you should simply declare a few angularjs elements to achieve similar effects</p>
+            <ul>
+                <li>
+                    First declaring li elemen as usual withou any classes
+                    <pre>&lt;li>drop down&lt;/li></pre>
+                </li>
+                <li>
+                    <p>Then adding some angularjs click elements</p>
+                    <pre><br>&lt;li ng-click="dropDown = !dropDown">drop down&lt;/li>
+                    </pre>
+                    <p>meaning of this when dropDown is true set it false if false set it true</p>
+                </li>
+                <li>
+                    <p>Then add which element should be shown</p>
+                    <p>Below the &lt;li> element add another &lt;li> element</p>
+                    <pre><br>&lt;li ng-show="dropDown"> <br> &lt;ul> <br>    &lt;li>...&lt;/li>  <br> &lt;/ul> <br>&lt;/li>
+                    </pre>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <h4 ng-click="embedVideos = !embedVideos">Embedding videos & audios</h4>
+        <div ng-if="embedVideos">
+            <p>You can embeded iframe videos and audios from any websites</p>
+            <p>You simply copy and paste the files</p>
+        </div>
+        <hr>
+        <h4 ng-click="portfolioBlog = !portfolioBlog">Portfolio & Blog loading files</h4>
+        <div ng-if="portfolioBlog">
+            <p>In both pages there have some hard coded angular codes directly inside of html codes</p>
+            <p>There have many choices to hide the angular codes through directives and I think it will be much better if I explain a little bit rather than hiding it</p>
+            <code>
+                &lt;div data-ng-include="loadViews" class="slide-top" data-ng-if="menu">...&lt;/div>
+            </code>
+            <p>
+                All the datas load inside of <code>loadViews</code> as rendered HTML file
+            </p>
+            <p>All you nedd you set the loading files properly inside of path <code>&lt;h2 class="info-title loading-items" path="contents/single-portfolio.html"></code></p>
+            <p>After loading completed <code>data-ng-if or ng-if</code> hides other part of the page</p>
+            <code>
+                &lt;div class="portfolio-page" data-ng-if="!menu">... &lt;/div>
+            </code>
+        </div>
+        <hr>
+        <h4 ng-click="headingsSection = !headingsSection">Headings</h4>
+        <div ng-if="headingsSection">
+            <h1>h1</h1>
+            <h2>h2</h2>
+            <h3>h3</h3>
+            <h4>h4</h4>
+            <h5>h5</h5>
+            <h6>h6</h6>
+        </div>
+        <hr>
+        <h4 ng-click="buttonsSection = !buttonsSection">Buttons</h4>
+        <div ng-if="buttonsSection">
+            <code>
+                &lt;button class="primary">...&lt;/button>
+            </code>
+            <p>Adding classes to the button will change the color </p>
+            <button>Simple</button>
+            <button class="primary">Primary</button>
+            <button class="accent">Accent</button>
+            <button class="warn">Warn</button>
+        </div>
+        <hr>
+        <h4 ng-click="formsSection = !formsSection">Forms</h4>
+        <div ng-if="formsSection">
+            <p>There number of options which you can make some interactivity with forms. </p>
+            <p>By giving ng-module to the input you can make some interactions.</p>
+            <pre class="ng-binding">&lt;h5&gt;Your name is &lt;span ng-bind="user.name">&lt;/span>&lt;/h5&gt;</pre>
+            <pre>&lt;div class="contents"&gt;
+      &lt;input type="text" name="name" ng-model="user.name"&gt;
+      &lt;span class="filling"&gt;&lt;/span&gt;
+      &lt;label&gt;Name&lt;/label&gt;
+ &lt;/div&gt;</pre>
+            <h5>Your name is {{user.name}}</h5>
+            <div class="contents">
+                <input type="text" name="name" ng-model="user.name">
+                <span class="filling"></span>
+                <label>Name</label>
+            </div>
+        </div>
+        <hr>
+        <h4 ng-click="progressBarSection = !progressBarSection">Progress bar</h4>
+        <div ng-if="progressBarSection">
+            <p>By setting the amount to the <code>progress-persentage</code> you can display the progressbar</p>
+            <code>
+                &lt;div class="skill-progress" data-progress-persentage="100%">...&lt;/div>
+            </code>
+            <div class="skill-progress" data-progress-persentage="100%">Persentage</div>
+        </div>
+        <hr>
+        <h4 ng-click="mapSection = !mapSection">Map</h4>
+        <div ng-if="mapSection">
+            <p>In order to setting map you need your API and the coordinates of your positioning</p>
+            <code>
+                &lt;div class="personal-map" latitude="..." longitude="..." zoom="..." api="...">&lt;/div>
+            </code>
+            <p>Zoom value from 1 - 15</p>
+            <p>For mor info <a target="_blank" href="https://developers.google.com/maps/documentation/javascript/tutorial#api_key">how to get your API</a></p>
+        </div>
+        <hr>
+        <h4 ng-click="colorsSection = !colorsSection">Colors</h4>
+        <div ng-if="colorsSection">
+            <p>
+                By changing the
+                <code class="primary"> .primary</code>
+                <code class="accent"> .accent</code>
+                <code class="warn"> .warn</code> stylesheets colors you can chnage the whole site colors.
+            </p>
+            <p>For better color options I would recomended <a target="_blank" href="https://www.materialpalette.com">Materialpalette</a></p>
+        </div>
+        <hr>
+        <h4 ng-click="creditsSection = !creditsSection">Credits</h4>
+        <div ng-if="creditsSection">
+            <p>Images - <a tartget="_blank" href="http://unsplash.com">Unsplash</a></p>
+            <p>FontAwesome - <a href="https://fortawesome.github.io/Font-Awesome/">Font-Awesome</a></p>
+            <p>Icons - <a tartget="_blank" href="https://www.google.com/design/icons/">Google material icons</a> <a tartget="_blank" href="https://www.iconfinder.com">Iconfinder(license free to use commercial)</a></p>
+            <p>Normalize - <a tartget="_blank" href="http://git.io/normalize">Normalize</a></p>
+            <p>Angularjs - <a tartget="_blank" href="http://angularjs.org">Angularjs</a></p>
+            <p>Bootstrap - <a tartget="_blank" href="http://getbootstrap.com">Bootstrap</a></p>
+            <p>Pexels - <a target="_blank" href="http://www.pexels.com">Pexels</a></p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------
+[Brown Color Stylesheet]
+
+Project:    Angular Based Personal Website Styles
+Version:    0.1.0
+Date:    09/2015
+Author:    Tuxsanov
+-------------------------------------------------------------------*/
+
+.primary {
+    background-color: #5D4037;
+}
+
+.warn {
+    background-color: #F44336;
+}
+
+.accent {
+    background-color: #FF5722;
+}
+
+.primary-font {
+    color: #5D4037;
+}
+
+.warn-font {
+    color: #F44336;
+}
+
+.accent-font {
+    color: #FF5722;
+}

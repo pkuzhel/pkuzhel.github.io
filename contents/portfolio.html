@@ -1,0 +1,25 @@
+<section class="full-width-container">
+    <div data-ng-include="loadViews" class="slide-top" data-ng-if="menu">
+    </div>
+    <div class="portfolio-page" data-ng-if="!menu">
+        <h1 class="title primary-font">Portfolio</h1>
+        <div ng-repeat="elm in mainpPortfolio " class="info-content loading-items primary slide-top" path="{{elm.path}}">
+            <img ng-src="{{elm.portfolioImg}}" alt="">
+            <div class="cover primary">
+                <img ng-src="{{elm.avatarImg}}" alt="" class="portfolio-avatar">
+                <span class="icon">
+                    <i class="user"></i> by {{elm.avatarName}}
+                </span>
+                <h2 class="info-title loading-items" path="contents/single-portfolio.html" ng-bind-html="elm.description"></h2>
+            </div>
+        </div>
+        <div class="pagination">
+            <a href="" class="page-num current">1</a>
+            <a href="" class="page-num">2</a>
+            <a href="" class="page-num">3</a>
+            <a href="" class="page-num dots">...</a>
+            <a href="" class="page-num">6</a>
+            <a href="" class="page-num next">next</a>
+        </div>
+    </div>
+</section>

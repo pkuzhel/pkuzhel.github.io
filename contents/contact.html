@@ -1,0 +1,36 @@
+<section class="left-side-container">
+    <div class="contact-page">
+        <div class="title primary-font">Contact</div>
+        <div class="info-content">
+            <div class="personal-map" latitude="41.2987867" longitude="69.2734611" zoom="14" api="AIzaSyBmGOAib7gm6cJBkjl-OjYQD0sYnHZyWeg"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Misa cumque aliquid laborum dolorem maiores.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, laudantium aliquam eligendi excepturi officia nostrum nihil odio veniam iste quia itaque earum consequatur repellat perferendis corporis, quibusdam vitae ipsam. Mollitia.</p>
+        </div>
+    </div>
+</section>
+<aside class="right-side-container">
+    <div class="contact-page">
+        <div class="info-content">
+            <h1 class="title" data-ng-show="user.fullname">Hello {{user.fullname}}</h1>
+            <p data-ng-show="user.email">We will contact to you with this {{user.email}} address</p>
+            <form name="form" class="main-form">
+                <div class="contents">
+                    <input type="text" name="userName" ng-model="user.fullname" required>
+                    <span class="filling"></span>
+                    <label>Full name</label>
+                </div>
+                <div class="contents">
+                    <input type="email" name="userName" ng-model="user.email" required>
+                    <span class="filling"></span>
+                    <label>Email</label>
+                </div>
+                <div class="contents">
+                    <textarea type="text" name="textarea" ng-model="user.texts" id="" cols="30" rows="10"></textarea>
+                    <span class="filling"></span>
+                    <label>Content</label>
+                </div>
+                <button class="primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</aside>
