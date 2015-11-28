@@ -62,8 +62,8 @@ body {
     background-color: #eee;
 }
 
-img {
-    width: 100%;
+img.pk-img {
+    max-width: 98%;
     pointer-events: none;
 }
 
